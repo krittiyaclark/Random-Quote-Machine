@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Random Quote Machine</title>
+  <meta name="description" content="Random Quote Machine | Krittiya Clark">
+  <meta name="author" content="Krittiya Clark">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheet -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+  <div id="background" class="container">
+    <div id="quote_container" class="row text-center">
+      <div class="col-md-12">
+        <h1>Random Quote Machine</h1>
+      </div><!-- .col-md-12 -->
+
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <div id="quote_slider">
+            <p id="quotation"></p>
+            <p id="author"></p>
+          </div><!-- #quote_slider -->
+
+          <ul class="list-inline">
+            <li>
+              <button href="#" id="get-quote" class="btn btn-default btn-lg btn-success"><i class="fa fa-quote-left fa-fw"></i>New quote</button>
+            </li>
+            <li>
+              <button href="#" id="share-quote" class="btn btn-default btn-lg btn-info"
+    href="#"><i class="fa fa-twitter fa-fw"></i>Tweet</button>
+            </li>
+          </ul>
+        </div><!-- col-md-8 col-md-offset-2 -->
+      </div><!-- .row -->
+    </div><!-- #quote_container .row -->
+  </div><!-- #background .container -->
+
+  <!-- Scripts -->
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
