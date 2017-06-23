@@ -2,23 +2,20 @@ $(document).ready(function() {
   function randomQuote() {
       // Using jQuery
       $.ajax( {
-          url: "http://quotes.stormconsultancy.co.uk/random.json",
+          url: "https://api.forismatic.com/api/1.0/?",
           dataType: "jsonp",
+          data: "method=getQuote&format=jsonp&lang=en&jsonp=?",
           type: 'GET',
           success: function(json) {
              // do something with data
-             console.log(json);
-             data = json[0];
-             $('#quotation').html('"'+json.quote+'"');
-             $('#author').html('-- '+json.author+' --');
-             $('a.twitter-share-button').attr('data-text',json.quote);
+             // console.log(json);
+             //data = json[0];
+             $('#quotation').html('"'+json.quoteText+'"');
+             $('#author').html('-- '+json.quoteAuthor+' --');
+             $('a.twitter-share-button').attr('data-text',json.quoteText);
            },
 
       });
-
-    $('#get-quote').click(function() {
-      randomQuote();
-    });
 
     ('#get-quote').click
     $('#share-quote').click(function() {
@@ -29,5 +26,12 @@ $(document).ready(function() {
     });
 
   }
-  randomQuote();
+
+      $(function() {
+        randomQuote();
+      });
+
+      $('#get-quote').click(function() {
+        randomQuote();
+      });
 });
