@@ -1,9 +1,5 @@
 $(document).ready(function() {
   function randomQuote() {
-    $('#get-quote').on('click', function(e){
-      e.preventDefault();
-
-      //document.getElementById("quotation").innerHTML = "Hello World";
       // Using jQuery
       $.ajax( {
           url: "http://quotes.stormconsultancy.co.uk/random.json",
@@ -20,8 +16,12 @@ $(document).ready(function() {
 
       });
 
+    $('#get-quote').click(function() {
+      randomQuote();
     });
-    $('#share-quote').on('click', function() {
+
+    ('#get-quote').click
+    $('#share-quote').click(function() {
          var tweetQuote=$('#quotation').html();
          var tweetAuthor=$('#author').html();
          var url='https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetQuote+"\n"+tweetAuthor);
